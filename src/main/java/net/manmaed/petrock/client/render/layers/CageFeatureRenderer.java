@@ -1,7 +1,7 @@
 package net.manmaed.petrock.client.render.layers;
 
 import com.mojang.blaze3d.platform.GlStateManager;
-import net.manmaed.petrock.client.render.model.ModelCakeHat;
+import net.manmaed.petrock.client.render.model.ModelCageHat;
 import net.manmaed.petrock.client.render.model.ModelPetRock;
 import net.manmaed.petrock.entity.EntityPetRock;
 import net.manmaed.petrock.libs.PRHats;
@@ -13,19 +13,20 @@ import net.minecraft.util.Identifier;
 /**
  * Created by manmaed on 30/08/2019.
  */
-public class BirthdayFeatureRenderer extends FeatureRenderer<EntityPetRock, ModelPetRock<EntityPetRock>> {
+public class CageFeatureRenderer extends FeatureRenderer<EntityPetRock, ModelPetRock<EntityPetRock>> {
 
-    private final ModelCakeHat hat = new ModelCakeHat();
-    private static final Identifier skin = new Identifier(Reference.MOD_ID, "textures/entity/event/cake.png");
+    private final ModelCageHat hat = new ModelCageHat();
+    private static final Identifier skin = new Identifier(Reference.MOD_ID, "textures/entity/event/cage.png");
 
-    public BirthdayFeatureRenderer(FeatureRendererContext<EntityPetRock, ModelPetRock<EntityPetRock>> featureRendererContext) {
+    public CageFeatureRenderer(FeatureRendererContext<EntityPetRock, ModelPetRock<EntityPetRock>> featureRendererContext) {
         super(featureRendererContext);
     }
 
 
+
     @Override
     public void render(EntityPetRock entityPetRock, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch, float scale) {
-        if (PRHats.birthday) {
+        if (PRHats.loneztar) {
             GlStateManager.pushMatrix();
             bindTexture(skin);
             GlStateManager.translatef(0F, -0.5626F, 0F);
@@ -35,6 +36,7 @@ public class BirthdayFeatureRenderer extends FeatureRenderer<EntityPetRock, Mode
             GlStateManager.popMatrix();
         }
     }
+
     private float interpolateValues(float prevVal, float nextVal, float partialTick) {
         return prevVal + partialTick * (nextVal - prevVal);
     }

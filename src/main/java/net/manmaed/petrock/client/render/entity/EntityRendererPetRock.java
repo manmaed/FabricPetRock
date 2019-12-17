@@ -1,9 +1,6 @@
 package net.manmaed.petrock.client.render.entity;
 
-import net.manmaed.petrock.client.render.layers.BirthdayFeatureRenderer;
-import net.manmaed.petrock.client.render.layers.ChristmasFeatureRenderer;
-import net.manmaed.petrock.client.render.layers.HalloweenFeatureRenderer;
-import net.manmaed.petrock.client.render.layers.SlowpokeFeatureRenderer;
+import net.manmaed.petrock.client.render.layers.*;
 import net.manmaed.petrock.client.render.model.ModelPetRock;
 import net.manmaed.petrock.entity.EntityPetRock;
 import net.manmaed.petrock.libs.Reference;
@@ -21,6 +18,8 @@ public class EntityRendererPetRock extends MobEntityRenderer<EntityPetRock, Mode
         this.addFeature(new ChristmasFeatureRenderer(this));
         this.addFeature(new HalloweenFeatureRenderer(this));
         this.addFeature(new SlowpokeFeatureRenderer(this));
+        this.addFeature(new CageFeatureRenderer(this));
+        this.addFeature(new SignFeatureRenderer(this));
         /*this.addFeature(toString());*/
     }
 

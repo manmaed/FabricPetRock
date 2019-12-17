@@ -27,7 +27,7 @@ public class SlowpokeFeatureRenderer extends FeatureRenderer<EntityPetRock, Mode
         if (PRHats.slowpoke) {
             GlStateManager.pushMatrix();
             bindTexture(skin);
-            if(PRHats.bday) {
+            if(PRHats.birthday) {
                 GlStateManager.translatef(0F, -0.19F, 0F);
             } else {
                 GlStateManager.translatef(0F, -0.005F, 0F);

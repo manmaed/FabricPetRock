@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "petrock",
+  "version": "${version}",
+
+  "name": "PetRock",
+  "description": "The Best Pet Ever!",
+  "authors": [
+    "manmaed"
+  ],
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.manmaed.petrock.PetRock"
+    ],
+    "client": [
+      "net.manmaed.petrock.PetRockClient"
+    ]
+  },
+
+  "depends": {
+    "fabricloader": ">=0.4.0",
+    "fabric": "*"
+  }
+}
